@@ -1,5 +1,5 @@
 <HTML>
-<TITLE> Таблица умножения </TITLE>
+<TITLE> Леонтьев Владимир Алексеевич Вариант 5 </TITLE>
 <BODY>
 <TABLE border=1>
 <?php

@@ -1,5 +1,5 @@
 <HTML>
-<TITLE> Леонтьев Владимир Алексеевич Вариант 5 </TITLE>
+<TITLE> Леонтьев Владимир Алексеевич </TITLE>
 <BODY>
 <TABLE border=1>
 <?php

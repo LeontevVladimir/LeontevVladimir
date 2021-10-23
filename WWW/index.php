@@ -8,4 +8,5 @@
 <li><a href="http://leontev/WWW/lab-1-1.php">Упражнение 1-2</a></li>
 <li><a href="http://leontev/WWW/lab-1-2.php">Упражнение 1-3</a></li>
 <li><a href="http://leontev/WWW/lab-1-3.php">Упражнение 1-4</a></li>
+<li><a href="http://leontev/WWW/lab-1-5.php">Самостоятельная работа 1</a></li>
 </ul>

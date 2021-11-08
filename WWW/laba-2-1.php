@@ -1,5 +1,4 @@
 <title>Леонтьев Владимир Алексеевич</title>
-</head>
 <?php
 echo "Массив treug <br>";
 $treug=[];

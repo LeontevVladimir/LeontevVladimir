@@ -1,5 +1,4 @@
 <title>Леонтьев Владимир Алексеевич</title>
-</head>
 <?php
 echo "Ассоциативный массив cust: <br>";
 $cust = array("cnum" => "2001", "cname" => "Hoffman","city" => "London", "snum" => "1001");

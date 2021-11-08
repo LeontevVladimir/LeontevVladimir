@@ -21,7 +21,7 @@ $treug=[];
  $rez = array_merge($treug,$kvd);
  for ($i = 1; $i <= count($rez); $i++)
  {
- 	echo $rez[$i]." ";
+ 	echo $rez[$i]." "; 
  }
   echo "<br>";
   echo "Сортировка массива rez <br>";

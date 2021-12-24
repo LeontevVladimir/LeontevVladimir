@@ -8,6 +8,7 @@
         <th>название</th>
         <th>Адрес</th>
         <th>Редактировать</th>
+        <th>Уничтожить</th>
     </tr>
     </tr>
     <?php
@@ -25,12 +26,14 @@
         echo "<td>" . $row['address'] . "</td>";
         echo "<td><a href='edit_store.php?id_as=" . $row['id_as']
             . "'>Редактировать</a></td>"; // запуск скрипта для редактирования
+        echo "<td><a href='delete_store.php?id_as=" . $row['id_as']
+            . "'>Удалить</a></td>"; // запуск скрипта для удаления записи
         echo "</tr>";
     }
     print "</table>";
     $num_rows = mysqli_num_rows($result); // число записей в таблице БД
     print("<P>Всего автосалонов: $num_rows </p>");
-    echo "<p><a href=new_store.php> Добавить автосалон </a>";
+    echo "<p><a href=new_store.php> Добавить магазин </a>";
     if ($_SESSION['type'] == 1)
         echo "<p><a href=auto.php> Вернуться назад </a>";
     elseif ($_SESSION['type'] == 2)

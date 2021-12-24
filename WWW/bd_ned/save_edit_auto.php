@@ -1,6 +1,7 @@
 <html>
 <body>
 <?php
+include("checks.php");
 require_once 'connect1.php';
 $mysqli = new mysqli($host, $user, $password, $database);
 if ($mysqli->connect_errno) {
@@ -23,9 +24,15 @@ WHERE id_au='$id_au'";
 $result = $mysqli->query($zapros);
 
 if ($result) {
-    echo 'Все сохранено. <a href="index.php"> Вернуться к списку Автомобилей </a>';
+    if ($_SESSION['type'] == 1)
+        echo "Все сохранено.<a href=auto.php> Вернуться к списку Автомобилей </a>";
+    elseif ($_SESSION['type'] == 2)
+        echo "Все сохранено.<a href=autoAdm.php> Вернуться к списку Автомобилей </a>";
 } else {
-    echo 'Ошибка сохранения. <a href="index.php">Вернуться к списку Автомобилей</a> ';
+    if ($_SESSION['type'] == 1)
+        echo "Ошибка сохранения.<a href=auto.php> Вернуться к списку Автомобилей </a>";
+    elseif ($_SESSION['type'] == 2)
+        echo "Ошибка сохранения.<a href=autoAdm.php> Вернуться к списку Автомобилей </a>";
 }
 ?>
 </body>

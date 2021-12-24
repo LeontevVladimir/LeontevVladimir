@@ -2,6 +2,7 @@
 <head><title> Добавление нового Автомобиля </title></head>
 <body>
 <H2>Добавление нового Автомобиля:</H2>
+<?php include("checks.php"); ?>
 <form action="save_new_auto.php" method="get">
     Марка: <input name="mark" size="50" type="text">
     <br>Модель: <input name="model" size="50" type="text">
@@ -12,7 +13,11 @@
     <p><input name="add" type="submit" value="Добавить">
         <input name="b2" type="reset" value="Очистить"></p>
 </form>
-<p>
-    <a href="index.php"> Вернуться к списку Автомобилей </a>
+<?php
+if ($_SESSION['type'] == 1)
+    echo "<p><a href=auto.php> Вернуться к списку Автомобилей </a>";
+elseif ($_SESSION['type'] == 2)
+    echo "<p><a href=autoAdm.php> Вернуться к списку Автомобилей </a>";
+?>
 </body>
 </html>

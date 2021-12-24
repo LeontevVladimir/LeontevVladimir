@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
-$database = 'a0611470_auto';
-$user = 'a0611470_root';
+$database = 'users';
+$user = 'root';
 $password = 'root';
 //require_once 'connect.php';
 $link = mysqli_connect($host, $user, $password, $database)

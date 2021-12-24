@@ -1,6 +1,7 @@
 <html>
 <body>
 <?php
+include("checks.php");
 require_once 'connect1.php';
 $mysqli = new mysqli($host, $user, $password, $database);
 if ($mysqli->connect_errno) {
@@ -16,11 +17,16 @@ $zapros = "UPDATE autos SET name_as='$name_as', address='$address'
 WHERE id_as='$id_as'";
 
 $result = $mysqli->query($zapros);
-
 if ($result) {
-    echo 'Все сохранено. <a href="stores.php"> Вернуться к списку магазинов </a>';
+    if ($_SESSION['type'] == 1)
+        echo "Все сохранено.<a href=stores.php> Вернуться к списку магазинов </a>";
+    elseif ($_SESSION['type'] == 2)
+        echo "Все сохранено.<a href=storesAdm.php> Вернуться к списку магазинов </a>";
 } else {
-    echo 'Ошибка сохранения. <a href="stores.php">Вернуться к списку магазинов</a> ';
+    if ($_SESSION['type'] == 1)
+        echo "Ошибка сохранения.<a href=stores.php> Вернуться к списку магазинов </a>";
+    elseif ($_SESSION['type'] == 2)
+        echo "Ошибка сохранения.<a href=storesAdm.php> Вернуться к списку магазинов </a>";
 }
 ?>
 </body>

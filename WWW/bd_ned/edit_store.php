@@ -4,6 +4,7 @@
 </head>
 <body>
 <?php
+include("checks.php");
 require_once 'connect1.php';
 $mysqli= new mysqli($host, $user, $password, $database);
 if ($mysqli->connect_errno) {
@@ -27,7 +28,10 @@ print "<input type='hidden' name='id_as' size='11' type='int'
 value='$id_as'>";
 print "<input type='submit' name='save' value='Сохранить'>";
 print "</form>";
-print "<p><a href='stores.php'> Вернуться к списку магазинов </a>";
+if ($_SESSION['type'] == 1)
+    echo "<p><a href=stores.php> Вернуться к списку магазинов </a>";
+elseif ($_SESSION['type'] == 2)
+    echo "<p><a href=storesAdm.php> Вернуться к списку магазинов </a>";
 ?>
 </body>
 </html>

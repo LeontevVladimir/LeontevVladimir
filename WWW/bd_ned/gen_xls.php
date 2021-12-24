@@ -1,4 +1,5 @@
 <?php
+include("checks.php");
 require_once 'connect1.php';
 require_once('php_excel/Classes/PHPExcel.php');
 require_once('php_excel/Classes/PHPExcel/Writer/Excel2007.php');
@@ -66,7 +67,7 @@ if ($result){
 }
 
 header('Content-Type: application/xls');
-header('Content-Disposition: inline; filename=OS.xls');
+header('Content-Disposition: inline; filename=auto.xls');
 header('Cache-Control: private, max-age=0, must-revalidate');
 header('Pragma: public');
 

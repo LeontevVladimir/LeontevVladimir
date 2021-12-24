@@ -9,6 +9,7 @@
         <th>Автосалон</th>
         <th>Стоимость</th>
         <th> Редактировать</th>
+        <th> Уничтожить</th>
     </tr>
     </tr>
     <?php
@@ -36,6 +37,8 @@ LEFT JOIN autos ON avail.id_as=autos.id_as");
 
             echo "<td><a href='edit_avail.php?id=" . $row['id']
                 . "'>Редактировать</a></td>"; //Запуск редактирования
+            echo "<td><a href='delete_avail.php?id=" . $row['id']
+                . "'>Удалить</a></td>"; //запуск удаления
             echo "</tr>";
             $counter++;
         }

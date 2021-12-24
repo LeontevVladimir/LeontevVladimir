@@ -1,4 +1,5 @@
 <?php
+include("checks.php");
 require_once 'connect1.php';
 require('tfpdf/tfpdf.php');
 
@@ -56,5 +57,5 @@ if ($result) {
     }
 }
 
-$pdf->Output("I", 'OS.pdf', true);
+$pdf->Output("I", 'auto.pdf', true);
 ?>
